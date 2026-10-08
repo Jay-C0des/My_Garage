@@ -12,7 +12,7 @@ h1 {
 
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: auto;
   padding: 0;
   background-color: #333333;
   display: flex;
@@ -22,7 +22,7 @@ ul {
 ul li a {
   display: block;
   color: #202326;
-  padding: 14px 16px;
+  padding: 30px 18px;
   text-decoration: none;
   color: #F2EEE6;
 }
