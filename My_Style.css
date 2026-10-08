@@ -1,0 +1,11 @@
+body {
+  background-color: #0D0F10;
+}
+
+h1 {
+  color: #F2EEE6;
+  text-align:center;
+  font-family: Barlow Condensed;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px #BFC1C2;
+}
