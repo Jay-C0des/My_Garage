@@ -9,3 +9,30 @@ h1 {
   text-transform: uppercase;
   text-shadow: 2px 2px 4px #BFC1C2;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+  display: flex;
+  color: #A7AAAD;
+}
+
+ul li a {
+  display: block;
+  color: #202326;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: #F2EEE6;
+}
+
+ul li a:hover:not(.active) {
+  background-color: #151719;
+  color: #A7AAAD;
+}
+
+ul li a.active {
+  background-color: #8F1117;
+  color: #F2EEE6;
+}
