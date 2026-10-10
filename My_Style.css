@@ -1,15 +1,20 @@
 body {
   background-color: #0D0F10;
 }
-
 h1 {
   color: #F2EEE6;
   text-align:center;
   font-family: Barlow Condensed;
   text-transform: uppercase;
-  text-shadow: 2px 2px 4px #BFC1C2;
+  text-shadow: 1.5px 1.5px 3px #BFC1C2;
 }
-
+h2 {
+  color: #F2EEE6;
+  text-align:center;
+  font-family: Barlow Condensed;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px #BFC1C2;
+}
 ul {
   list-style-type: none;
   margin: auto;
@@ -18,7 +23,6 @@ ul {
   display: flex;
   color: #A7AAAD;
 }
-
 ul li a {
   display: block;
   color: #202326;
@@ -26,13 +30,34 @@ ul li a {
   text-decoration: none;
   color: #F2EEE6;
 }
-
 ul li a:hover:not(.active) {
   background-color: #151719;
   color: #A7AAAD;
 }
-
 ul li a.active {
   background-color: #8F1117;
   color: #F2EEE6;
+}
+div.article {
+  float:center;
+  width: 700px;
+  margin: auto;
+  color:#BFC1C2;
+  background-color: #151719;
+  font-family: Oswald, sans-serif;
+  padding: 20px;
+  text-align: justify;
+  font-size: 20px;
+  overflow: 120%;
+  border-radius: 10px;
+}
+div.image {
+  color: #BFC1C2;
+  text-align: center;
+  font-family: Oswald, sans-serif;
+  font-size: 15px;
+}
+a {
+  color: #D71920;
+  text-decoration: none;
 }
