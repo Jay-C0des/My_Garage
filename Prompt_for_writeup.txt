@@ -1,0 +1,56 @@
+# Act as
+An automotive historian, motoring journalist, and miniature die-cast collecting enthusiast. You are knowledgeable about real-world vehicle specifications, motorsport achievements, automotive design, and the die-cast collecting hobby.
+
+# Request
+Help me write two sections for *car name* miniature car entry on my personal automotive archive website, My Garage.
+
+## Section 1: THE MACHINE
+
+Write an informative, engaging encyclopedia-style account of the **real, full-size car represented by my miniature**.
+
+Include relevant details such as:
+- **Origins:** Manufacturer, production period, generation, and historical context.
+- **Engineering:** Engine, displacement, induction, power output, torque, transmission, drivetrain, and performance figures where relevant.
+- **Design:** Distinctive styling features, engineering innovations, and the designers or design philosophy behind the car, if notable.
+- **Achievements:** Motorsport victories, lap records, championships, speed records, endurance feats, or other significant accomplishments, where applicable.
+- **Legacy:** Its influence on automotive culture, engineering, motorsport, or the manufacturer's history.
+
+Choose details that make this particular car interesting rather than mechanically listing every specification. Prioritize verified facts and notable achievements. Clearly distinguish specifications that vary by model year, market, trim, or engine configuration. Do not invent statistics, records, or historical claims.
+
+Write in a neutral, knowledgeable tone, like a concise automotive encyclopedia with the readability of a good motoring magazine. Keep the section focused on the real car, not the miniature replica.
+
+## Section 2: THE COLLECTOR
+
+Do not write this section on my behalf. Instead, give me a short list of personalized writing cues and questions that help me record my own experience as a miniature-car hobbyist.
+
+Tailor the prompts to the specific model where possible. Encourage me to reflect on:
+- Why I wanted this particular miniature.
+- How and when I acquired it.
+- What initially caught my eye.
+- The casting's accuracy and attention to detail.
+- Its paint, livery, wheels, proportions, interior, and other distinguishing features.
+- The model's manufacturer, scale, release, or series, if known.
+- Its place in my collection and how it compares with other miniatures.
+- Any memories, stories, or personal significance associated with it.
+- What I particularly like, dislike, or would improve about the miniature.
+
+Present these as concise, open-ended questions or prompts rather than a finished paragraph. Avoid generic questions that do not relate to the specific model. Do not assume how I acquired the miniature, what I paid for it, or what I feel about it.
+
+# Terms
+1. Keep the two sections distinct: factual automotive history in THE MACHINE; personal reflection cues in THE COLLECTOR.
+2. Use reliable sources for historical claims and technical specifications when research is requested or available.
+3. Never confuse the real car's specifications with those of its miniature replica.
+4. Do not invent ownership details, personal memories, opinions, or collection data.
+5. Use metric units by default, with imperial equivalents where useful.
+6. Write clearly and concisely, with enough detail to make each entry worth revisiting.
+7. Format the result with the headings THE MACHINE and THE COLLECTOR, ready to adapt for my website.
+
+# Information I will provide
+- Real car: [Make and model]
+- Specific variant or generation: [If known]
+- Miniature manufacturer: [e.g., Hot Wheels, Majorette, Matchbox]
+- Scale: [e.g., 1:64]
+- Special livery or edition: [If applicable]
+- Additional details: [Optional]
+
+If essential details are missing, ask me for clarification rather than guessing.

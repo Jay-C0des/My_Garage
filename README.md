@@ -1,1 +1,24 @@
+TEMPLATE:
 
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>My Garage</title>
+    <link rel="icon" type="image/x-icon" href="Photos\My_Garage_logo.png">
+    <link rel="stylesheet" type="text/css" href="My_Style.css">
+
+
+
+</head>
+<body>
+    <ul>
+      <img src="Photos\My_Garage_logo.png" alt="My Garage Logo" style="display: block; margin-left: 5px; margin-right: 5px; float: left; width: 75px; height: auto;">
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="JDM.html">JDMs</a></li>
+      <li><a href="Eurocars.html">Eurocars</a></li>
+      <li><a href="FreedoMotors.html">FreedoMotors</a></li>
+    </ul>
+    
+</body>
+</html>
