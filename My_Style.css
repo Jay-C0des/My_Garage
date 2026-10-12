@@ -1,5 +1,8 @@
 body {
   background-color: #0D0F10;
+  width: calc(100% - 16px);           /* Grows and shrinks with its container */
+  height: auto;          /* Allows aspect-ratio to dictate the height */
+
 }
 h1 {
   color: #F2EEE6;
@@ -22,6 +25,7 @@ ul {
   background-color: #333333;
   display: flex;
   color: #A7AAAD;
+  flex-wrap: wrap
 }
 ul li a {
   display: block;
@@ -40,7 +44,7 @@ ul li a.active {
 }
 div.article {
   float:center;
-  width: 700px;
+  max-width: 1000px;
   margin: auto;
   color:#BFC1C2;
   background-color: #151719;
@@ -50,12 +54,48 @@ div.article {
   font-size: 20px;
   overflow: 120%;
   border-radius: 10px;
+  width: calc(100% - 40px);   
+  height: auto; 
+  display: block;       
+}
+div.para {
+  float:center;
+  width: 1300px;
+  margin: auto;
+  color:#BFC1C2;
+  background-color: #101719;
+  font-family: Oswald, sans-serif;
+  padding: 20px;
+  text-align: justify;
+  font-size: 20px;
+  overflow: 120%;
+  border-radius: 10px;
+  width: calc(100% - 40px);   
+  height: auto; 
+  display: block; 
 }
 div.image {
   color: #BFC1C2;
   text-align: center;
   font-family: Oswald, sans-serif;
   font-size: 15px;
+  display: flex;
+}
+div.image figure {
+  margin: min(40px, 2vw);
+}
+div.showcase {
+  display: flex;            /* photo, text and photo share one row, so they cannot overlap */
+  align-items: center;
+}
+@media (max-width: 800px) {
+  div.showcase {
+    flex-wrap: wrap;        /* narrow window: photos on top, text below */
+    justify-content: space-around;
+  }
+  div.showcase div.article {
+    order: 1;
+  }
 }
 a {
   color: #D71920;
