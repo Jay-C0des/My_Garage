@@ -99,5 +99,5 @@ div.showcase {
 }
 a {
   color: #D71920;
-  text-decoration: none;
+  text-decoration: underline;
 }
