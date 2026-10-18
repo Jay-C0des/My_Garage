@@ -7,6 +7,17 @@
     <link rel="stylesheet" type="text/css" href="My_Style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script>
+      function revealEmail() {
+        // Decode or define your email address
+        const email = "hello" + "@" + "example.com"; 
+        
+        // Replace the button with a clickable mailto link
+        document.getElementById("email-box").innerHTML = 
+          `<a href="mailto:${email}">${email}</a>`;
+      }
+    </script>
+
 
 </head>
 <body>
@@ -46,7 +57,36 @@
       </figure>
     </div>
     </div>
+    <br><br><br>
+
+    <div class="faq-container">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>What is the purpose of this website?</summary>
+        <p>The purpose of this website is to showcase my favorite cars from various categories and share my passion for automotive design with others, while also developing skills in basic HTML and CSS.</p>
+      </details>
+
+      <details>
+        <summary>What type of cars do you collect?</summary>
+        <p>I actually have some criteria. The car model should be historically significant, visually appealing, and represent a unique aspect of automotive engineering, all while being within the reach of my wallet.</p>
+      </details>
+
+      <details>
+        <summary>Do you ship internationally?</summary>
+        <p>Yes, we ship to over 50 countries worldwide. Shipping fees and delivery times vary by destination.</p>
+      </details>
+    </div>
+    <br><br><br><br><br>
     
 
+    <footer>
+      <p>Want to share a feedback?</p>
+      <p>Write to me at: 
+        <span id="email-box">
+          <button onclick="revealEmail()" style="background-color: #151719; color: #F2EEE6; border: none">Click to show email</button>
+        </span>
+      </p>
+    </footer>
 </body>
 </html>

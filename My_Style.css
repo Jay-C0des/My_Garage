@@ -38,6 +38,7 @@ ul li a {
 ul li a:hover:not(.active) {
   background-color: #151719;
   color: #A7AAAD;
+  transition: all 0.5s ease;
 }
 ul li a.active {
   background-color: #8F1117;
@@ -105,4 +106,53 @@ a {
 hr {
   border: 1px solid #BFC1C2;
   
+}
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+  color:#F2EEE6;
+  background-color: #151719;
+  padding: 5px;
+  font-family: Oswald, sans-serif;
+  border-radius: 20px;
+}
+
+details {
+  background-color: #151719;
+  border: 2px solid #202326;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+summary {
+  cursor: pointer;
+  padding: 5px;
+  outline: none;
+  text-transform: uppercase;
+  text-shadow: .5px .5px 1px #BFC1C2;
+}
+
+/* Changes background when the FAQ is expanded */
+details[open] {
+  background-color: #202326;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+details p {
+  margin-top: 10px;
+  padding: 0 5px;
+  color: #F2EEE6;
+  line-height: 1.5;
+}
+
+footer {
+  background-color: #151719;
+  color: #F2EEE6;
+  text-align: center;
+  margin: 0px;
+  box-shadow: 0 50vh 0 50vh #151719;
+  padding: 3px;
+  font-family: Oswald, sans-serif;
 }
