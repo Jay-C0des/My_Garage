@@ -1,8 +1,7 @@
 body {
   background-color: #0D0F10;
-  width: calc(100% - 16px);           /* Grows and shrinks with its container */
+  width: 100%;           /* Grows and shrinks with its container */
   height: auto;          /* Allows aspect-ratio to dictate the height */
-
 }
 h1 {
   color: #F2EEE6;
@@ -18,29 +17,35 @@ h2 {
   text-transform: uppercase;
   text-shadow: 1px 1px 2px #BFC1C2;
 }
-ul {
-  list-style-type: none;
-  margin: auto;
-  padding: 0;
+/* ===== Navbar ===== */
+.my-navbar {
   background-color: #333333;
-  display: flex;
-  color: #A7AAAD;
+  padding: 0;
+  margin: 0;
   flex-wrap: wrap;
-  display: flex;
 }
-ul li a {
+
+.navbar-logo {
   display: block;
-  color: #202326;
+  margin: 5px;
+  width: 75px;
+  height: auto;
+}
+
+.my-navbar .navbar-nav .nav-link {
+  display: block;
+  color: #F2EEE6;
   padding: 30px 18px;
   text-decoration: none;
-  color: #F2EEE6;
 }
-ul li a:hover:not(.active) {
+
+.my-navbar .navbar-nav .nav-link:hover:not(.active) {
   background-color: #151719;
   color: #A7AAAD;
   transition: all 0.5s ease;
 }
-ul li a.active {
+
+.my-navbar .navbar-nav .nav-link.active {
   background-color: #8F1117;
   color: #F2EEE6;
 }
@@ -97,6 +102,12 @@ div.showcase {
   }
   div.showcase div.article {
     order: 1;
+  }
+}
+/* Smaller link padding on phones so the expanded menu fits */
+@media (max-width: 991.98px) {
+  .my-navbar .navbar-nav .nav-link {
+    padding: 14px 18px;
   }
 }
 a {
