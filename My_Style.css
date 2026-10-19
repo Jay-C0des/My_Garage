@@ -28,7 +28,8 @@ h2 {
 .navbar-logo {
   display: block;
   margin: 5px;
-  width: 75px;
+  width: 100%;
+  max-width: 75px;
   height: auto;
 }
 
