@@ -156,3 +156,18 @@ footer {
   padding: 3px;
   font-family: Oswald, sans-serif;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+  border-radius: 10px;
+  float: center; 
+}
+.container div {
+  padding: 5px;
+  font-size: 30px;
+  text-align: center;
+  float: center; 
+  border-radius: 10px;
+}
