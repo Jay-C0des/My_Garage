@@ -23,8 +23,7 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark my-navbar">
-    <img src="Photos/My_Garage_logo.png" alt="My Garage Logo" class="navbar-logo">
-
+    <a href="index.html"><img src="Photos/My_Garage_logo.png" alt="My Garage Logo" class="navbar-logo"></a>
     <!-- Hamburger button (only visible on small screens) -->
     <button class="navbar-toggler ms-auto" type="button"
             data-bs-toggle="collapse" data-bs-target="#navbarLinks"
@@ -44,53 +43,71 @@
     </div>
   </nav>
 
-    <br><br><br>
-    <h1 style="font-size: 300%;">Welcome to My Garage</h1>
-    <p style="text-align:center; width: 100%;">🟥🟥🟥🟥🟥🟥🟥🟥 ⬜⬜⬜ 🟥🟥🟥🟥🟥🟥🟥🟥</p>
-
-
-    <div class="showcase">
-    <div class="image" style="float:inline-start;">
-      <figure>
-        <br><br>
-        <img src="Photos\F350.jpeg" style="transform: rotate(-10deg); width: min(350px, 40vw); height: auto; margin-left: 10px; border-radius: 20px; box-shadow: 5px 5px 10px #202326;">
-        <figcaption style="transform: rotate(-10deg); text-align: center;">My first car</figcaption>
-      </figure>
+    <!-- Heading and colour bar -->
+    <div class="container">
+      <br><br><br>
+      <h1 style="font-size: 300%;">Welcome to My Garage</h1>
+      <p style="text-align:center; width: 100%; white-space: nowrap;">🟥🟥🟥🟥🟥🟥🟥🟥 ⬜⬜⬜ 🟥🟥🟥🟥🟥🟥🟥🟥</p>
     </div>
-    <div class="article"><h2>This is a project made by Jayesh.</h2>
-      <p>"My Garage" is a website that showcases my favorite cars from various categories. The website is divided into three main sections: JDMs, Eurocars, and FreedoMotors. Each section contains a collection of cars that I find interesting and worth sharing with others.
-      <br>Some of the cars featured on this website include the <em>Nissan Silvia(S15), Ferrari F40 Competizione, Lamborghini Huracan STO, and many more</em>. Each car is accompanied by a brief description and specifications to provide visitors with a better understanding of the vehicle.</p></div>
 
+    <!-- Showcase: photo, text, photo.
+         On phones they stack (text first); on large screens they sit side by side -->
+    <div class="container">
+      <div class="row align-items-center">
 
-    <div class="image" style="float:inline-end;">
-      <figure>
-        <br><br>
-        <img src="Photos/Utopia.jpeg" style="transform: rotate(10deg); width: min(350px, 40vw); height: auto; margin-left: 10px; border-radius: 20px; box-shadow: 5px 5px 10px #202326;">
-        <figcaption style="transform: rotate(10deg); text-align: center;">Main Highlight</figcaption>
-      </figure>
+        <div class="col-12 col-lg-3 order-2 order-lg-1">
+          <div class="image" style="float:inline-start;">
+            <figure>
+              <br><br>
+              <img src="Photos\F350.jpeg" style="width: min(350px, 40vw); height: auto; margin-left: 10px; border-radius: 20px; box-shadow: 5px 5px 10px #202326;">
+              <figcaption style="transform: rotate(-10deg); text-align: center;">My first car</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6 order-1 order-lg-2">
+          <div class="article"><h2>This is a project made by Jayesh.</h2>
+            <p>"My Garage" is a website that showcases my favorite cars from various categories. The website is divided into three main sections: JDMs, Eurocars, and FreedoMotors. Each section contains a collection of cars that I find interesting and worth sharing with others.
+            <br>Some of the cars featured on this website include the <em>Nissan Silvia(S15), Ferrari F40 Competizione, Lamborghini Huracan STO, and many more</em>. Each car is accompanied by a brief description and specifications to provide visitors with a better understanding of the vehicle.</p></div>
+        </div>
+
+        <div class="col-12 col-lg-3 order-3 order-lg-3">
+          <div class="image" style="float:inline-end;">
+            <figure>
+              <br><br>
+              <img src="Photos/Utopia.jpeg" style="width: min(350px, 40vw); height: auto; margin-left: 10px; border-radius: 20px; box-shadow: 5px 5px 10px #202326;">
+              <figcaption style="transform: rotate(10deg); text-align: center;">Main Highlight</figcaption>
+            </figure>
+          </div>
+        </div>
+
+      </div>
     </div>
+
+    <!-- FAQ -->
+    <div class="container">
+      <br><br><br>
+
+      <div class="faq-container">
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+          <summary>What is the purpose of this website?</summary>
+          <p>The purpose of this website is to showcase my favorite cars from various categories and share my passion for automotive design with others, while also developing skills in basic HTML and CSS.</p>
+        </details>
+
+        <details>
+          <summary>What type of cars do you collect?</summary>
+          <p>I actually have some criteria. The car model should be historically significant, visually appealing, and represent a unique aspect of automotive engineering, all while being within the reach of my wallet.</p>
+        </details>
+
+        <details>
+          <summary>Do you ship internationally?</summary>
+          <p>Yes, we ship to over 50 countries worldwide. Shipping fees and delivery times vary by destination.</p>
+        </details>
+      </div>
+      <br><br><br><br><br>
     </div>
-    <br><br><br>
-
-    <div class="faq-container">
-      <h2>Frequently Asked Questions</h2>
-
-      <details>
-        <summary>What is the purpose of this website?</summary>
-        <p>The purpose of this website is to showcase my favorite cars from various categories and share my passion for automotive design with others, while also developing skills in basic HTML and CSS.</p>
-      </details>
-
-      <details>
-        <summary>What type of cars do you collect?</summary>
-        <p>I actually have some criteria. The car model should be historically significant, visually appealing, and represent a unique aspect of automotive engineering, all while being within the reach of my wallet.</p>
-      </details>
-
-      <details>
-        <summary>Do you ship internationally?</summary>
-        <p>Yes, we ship to over 50 countries worldwide. Shipping fees and delivery times vary by destination.</p>
-      </details>
-    </div>
-    <br><br><br><br><br>
 
 
     <footer>
