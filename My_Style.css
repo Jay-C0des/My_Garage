@@ -99,12 +99,35 @@ div.showcase {
   align-items: center;
 }
 @media (max-width: 800px) {
+  /* Stack everything in one column: text first, then the photos */
   div.showcase {
-    flex-wrap: wrap;        /* narrow window: photos on top, text below */
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: stretch;
   }
+
+  /* Text block: full width, left-aligned and easier to read */
   div.showcase div.article {
     order: 1;
+    width: calc(100% - 30px);
+    max-width: none;
+    margin: 0 auto 25px auto;
+    padding: 18px;
+    text-align: left;        /* removes the stretched word gaps */
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  /* Photos: below the text, one per row, centred */
+  div.showcase div.image {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  div.showcase div.image img {
+    width: min(300px, 75vw) !important;   /* overrides the inline width */
+    margin-left: 0 !important;            /* overrides the inline margin */
   }
 }
 /* Smaller link padding on phones so the expanded menu fits */
