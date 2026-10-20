@@ -1,7 +1,9 @@
 body {
   background-color: #0D0F10;
-  width: 100%;           /* Grows and shrinks with its container */
-  height: auto;          /* Allows aspect-ratio to dictate the height */
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  min-height: 100vh;
 }
 h1 {
   color: #F2EEE6;
@@ -111,6 +113,26 @@ div.showcase {
     padding: 14px 18px;
   }
 }
+/* Phones and narrow windows: text full width, image stacked below */
+@media (max-width: 800px) {
+  div.para {
+    float: none !important;          /* stop floating beside the image */
+    width: calc(100% - 40px) !important;
+    max-width: none !important;
+    margin: 15px auto !important;    /* centre it with even side space */
+    font-size: 110% !important;      /* the inline 170% is too large on a phone */
+  }
+
+  div.image {
+    float: none !important;          /* drop below the text */
+    justify-content: center;         /* centre the photo */
+  }
+
+  div.image figure,
+  div.image img {
+    float: none !important;
+  }
+}
 a {
   color: #D71920;
   text-decoration: underline;
@@ -126,7 +148,7 @@ hr {
   background-color: #151719;
   padding: 5px;
   font-family: Oswald, sans-serif;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 details {
@@ -158,17 +180,18 @@ details p {
   color: #F2EEE6;
   line-height: 1.5;
 }
-
 footer {
   background-color: #151719;
   color: #F2EEE6;
   text-align: center;
-  margin: 0px;
-  box-shadow: 0 50vh 0 50vh #151719;
-  padding: 3px;
+  clear: both;          /* moves the footer below the floated text and image */
+  margin-top: 40px;     /* space between the content and the footer */
+  padding: 12px 0;
   font-family: Oswald, sans-serif;
 }
-
+footer p {
+  margin: 0 0 6px 0;    /* removes the default paragraph gaps */
+}
 .container {
   display: grid;
   grid-template-columns: auto auto auto;
