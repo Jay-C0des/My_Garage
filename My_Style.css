@@ -98,7 +98,7 @@ div.showcase {
   display: flex;            /* photo, text and photo share one row, so they cannot overlap */
   align-items: center;
 }
-@media (max-width: 800px) {
+@media (max-width: 991.98px) {
   /* Stack everything in one column: text first, then the photos */
   div.showcase {
     flex-direction: column;
@@ -137,7 +137,7 @@ div.showcase {
   }
 }
 /* Phones and narrow windows: text full width, image stacked below */
-@media (max-width: 800px) {
+@media (max-width: 991.98px) {
   div.para {
     float: none !important;          /* stop floating beside the image */
     width: calc(100% - 40px) !important;
