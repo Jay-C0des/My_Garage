@@ -3,8 +3,9 @@ body {
   background-color: #0D0F10;
   width: 100%;
   height: auto;
-  flex-direction: column;
   min-height: 100vh;
+  position: relative;      /* the footer is positioned against the page */
+  padding-bottom: 90px;    /* reserves space so the footer never covers content */
 }
 h1 {
   color: #F2EEE6;
@@ -35,10 +36,10 @@ h2 {
   height: auto;
 }
 .navbar-logo {
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 .navbar-logo:hover {
-  transform: scale(1.1) rotate(8deg);
+  transform: scale(1.2) rotate(10deg);
 }
 .my-navbar .navbar-nav .nav-link {
   display: block;
@@ -212,12 +213,19 @@ details p {
   line-height: 1.5;
 }
 footer {
+  position: absolute;      /* pinned to the bottom of the page */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;            /* must match the body's padding-bottom */
+  box-sizing: border-box;
+  display: flex;           /* centres the text inside the footer */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #151719;
   color: #F2EEE6;
   text-align: center;
-  clear: both;          /* moves the footer below the floated text and image */
-  margin-top: 40px;     /* space between the content and the footer */
-  padding: 12px 0;
   font-family: Oswald, sans-serif;
 }
 footer p {
@@ -275,4 +283,32 @@ footer p {
   div.image img {
     width: min(490px, 36vw) !important;  /* scales the photo with the screen */
   }
+}
+/* Album: wider dropdown container */
+.album-faq {
+  max-width: 1100px;
+}
+
+/* Album: photos in a centred row, wrapping onto new lines when needed */
+.album-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 5px;
+}
+
+/* Album: every photo has the same size and shape */
+.album-grid img {
+  display: block;
+  width: 220px;
+  max-width: 100%;             /* shrinks on phones so it never overflows */
+  aspect-ratio: 4 / 3;         /* same shape for every photo */
+  object-fit: cover;           /* crops evenly instead of stretching */
+  border-radius: 15px;
+}
+
+/* Album: dropdown titles */
+.album-faq summary {
+  font-size: 1.1rem;
 }
