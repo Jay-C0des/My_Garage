@@ -468,3 +468,61 @@ a.car-suggestion[href$="album.html"] {
     padding: 16px 18px;       /* taller tap targets */
   }
 }
+/* Phones: Reddit-style search pill and larger navbar text */
+@media (max-width: 991.98px) {
+  .my-navbar .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    padding: 16px 18px;
+  }
+
+  #car-search {
+    position: relative;
+    width: 100%;
+    padding: 0 12px;
+    margin: 12px 0 !important;
+  }
+
+  #car-input {
+    width: 100%;
+    height: 48px;
+    font-size: 17px;                 /* 16px+ stops phones zooming in on tap */
+    padding: 10px 44px 10px 46px;    /* room for the icon on the left and × on the right */
+    border-radius: 999px;            /* pill shape */
+    border: 1px solid #272B2E;
+    background-color: #272B2E;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A7AAAD' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    background-size: 18px 18px;
+  }
+
+  #car-input::placeholder {
+    color: #A7AAAD;
+    opacity: 1;
+  }
+
+  #car-input:focus {
+    background-color: #32363A;
+    border-color: #D71920;
+  }
+
+  .car-clear {
+    right: 24px;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    color: #A7AAAD;
+  }
+
+  .car-suggestions {
+    left: 12px;
+    right: 12px;
+    border-radius: 14px;
+    margin-top: 6px;
+  }
+
+  .car-suggestion {
+    padding: 14px 18px;
+    font-size: 1.05rem;
+  }
+}
