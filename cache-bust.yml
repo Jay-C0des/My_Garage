@@ -1,4 +1,4 @@
-name: Cache-bust CSS
+name: Cache-bust CSS and JS
 
 on:
   push:
@@ -13,14 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Add a fresh version number to every stylesheet link
+      - name: Add a fresh version number to every stylesheet and script link
         run: |
           V=${GITHUB_SHA::8}
-          find . -name '*.html' -exec sed -i -E "s/My_Style\.css(\?v=[A-Za-z0-9]*)?/My_Style.css?v=$V/g" {} +
+          find . -name '*.html' -exec sed -i -E "s/(My_Style\.css|search\.js)(\?v=[A-Za-z0-9]*)?/\1?v=$V/g" {} +
 
       - name: Commit the updated links
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git diff --cached --quiet || (git commit -m "Auto cache-bust CSS links" && git push)
+          git diff --cached --quiet || (git commit -m "Auto cache-bust CSS and JS links" && git push)
