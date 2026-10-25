@@ -452,3 +452,19 @@ a.car-suggestion[href$="album.html"] {
     padding: 14px 16px;
   }
 }
+/* Phones: larger navbar logo, links and hamburger button */
+@media (max-width: 991.98px) {
+  .navbar-logo {
+    max-width: 95px;          /* bigger logo */
+  }
+
+  .navbar-toggler {
+    padding: 6px 10px;
+    font-size: 1.4rem;        /* bigger hamburger button */
+  }
+
+  .my-navbar .navbar-nav .nav-link {
+    font-size: 1.15rem;       /* larger link text */
+    padding: 16px 18px;       /* taller tap targets */
+  }
+}
