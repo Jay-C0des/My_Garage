@@ -20,6 +20,7 @@
           `<a href="mailto:${email}">${email}</a>`;
       }
     </script>
+    <script src="search.js" defer></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark my-navbar">
@@ -40,6 +41,13 @@
         <li class="nav-item"><a class="nav-link" href="FreedoMotors.html">FreedoMotors</a></li>
         <li class="nav-item"><a class="nav-link" href="album.html">Album</a></li>
       </ul>
+        <form class="d-flex my-2 my-lg-0 ms-lg-3 position-relative" role="search" id="car-search" autocomplete="off">
+          <input class="form-control form-control-sm" type="search" id="car-input"
+                placeholder="Search a car..." aria-label="Search cars">
+                <button type="button" class="car-clear" id="car-clear" aria-label="Clear search">&times;</button>
+          <div class="car-suggestions" id="car-suggestions"></div>
+          
+        </form>
     </div>
   </nav>
 
@@ -59,7 +67,7 @@
           <div class="image" style="float:inline-start;">
             <figure>
               <br>
-              <img src="Photos\F350.jpeg" style="width: min(350px, 40vw); height: auto; margin-left: 10px; border-radius: 20px; box-shadow: 5px 5px 10px #202326;">
+              <img src="Photos/F350.jpeg" style="width: min(350px, 40vw); height: auto; margin-left: 10px; border-radius: 20px; box-shadow: 5px 5px 10px #202326;">
               <figcaption style="text-align: center;">My first car</figcaption>
             </figure>
           </div>
@@ -75,7 +83,7 @@
           <div class="image" style="float:inline-end;">
             <figure>
               <br>
-              <img src="Photos/Utopia.jpeg" style="width: min(350px, 40vw); height: auto; margin-left: 10px; border-radius: 20px; box-shadow: 5px 5px 10px #202326;">
+              <img src="Photos/Enzo.jpeg" style="width: min(350px, 40vw); height: auto; margin-left: 10px; border-radius: 20px; box-shadow: 5px 5px 10px #202326;">
               <figcaption style="text-align: center;">Main Highlight</figcaption>
             </figure>
           </div>

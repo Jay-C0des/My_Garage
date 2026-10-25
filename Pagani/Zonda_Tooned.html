@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Garage</title>
+    <link rel="icon" type="image/x-icon" href="../Photos/My_Garage_logo.png">
+
+    <!-- Bootstrap 5.3.3 CSS (must come BEFORE My_Style.css) -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="../My_Style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+      function revealEmail() {
+        const email = "jayeshk.11.12" + "@" + "gmail.com";
+        document.getElementById("email-box").innerHTML =
+          `<a href="mailto:${email}">${email}</a>`;
+      }
+    </script>
+</head>
+<body data-base="../">
+  <nav class="navbar navbar-expand-lg navbar-dark my-navbar">
+    <a href="../index.html"><img src="../Photos/My_Garage_logo.png" alt="My Garage Logo" class="navbar-logo"></a>
+
+    <!-- Hamburger button (only visible on small screens) -->
+    <button class="navbar-toggler ms-auto" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navbarLinks"
+            aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links: shown in a row on large screens, collapsed on small screens -->
+    <div class="collapse navbar-collapse" id="navbarLinks">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../JDM.html">JDMs</a></li>
+        <li class="nav-item"><a class="nav-link active" href="../Eurocars.html">Eurocars</a></li>
+        <li class="nav-item"><a class="nav-link" href="../FreedoMotors.html">FreedoMotors</a></li>
+        <li class="nav-item"><a class="nav-link" href="../album.html">Album</a></li>
+      </ul>
+        <form class="d-flex my-2 my-lg-0 ms-lg-3 position-relative" role="search" id="car-search" autocomplete="off">
+          <input class="form-control form-control-sm" type="search" id="car-input"
+                placeholder="Search a car..." aria-label="Search cars">
+                          <button type="button" class="car-clear" id="car-clear" aria-label="Clear search">&times;</button> 
+          <div class="car-suggestions" id="car-suggestions"></div>
+        </form>
+    </div>
+  </nav>
+
+    <h1>Pagani Zonda Toon'd</h1>
+
+    <div class="para" style="font-size: 170%; float:left; width: 60%; max-width: 1200px; height: auto; display: block; margin-left: 15px">
+        
+        <h2>The Machine</h2>
+            <p>Introduced in 2009, the <em>Pagani Zonda Cinque</em> was created at the request of Pagani’s Hong Kong dealer as an exceptionally extreme, road-legal version of the Zonda, drawing inspiration from the track-only Zonda R. Its naturally aspirated 7.3-litre Mercedes-AMG V12 produces 678 CV (499 kW) and 780 Nm of torque, driving the rear wheels through a six-speed sequential gearbox. A carbon-titanium chassis, lightweight magnesium components and an adjustable rear wing help deliver extraordinary performance, including a 0–100 km/h time of 3.4 seconds. <em>Only five coupés were built</em>, followed by five roadsters, making the Cinque one of the rarest and most distinctive expressions of Pagani’s philosophy of combining art with engineering.</p>
+        <h2>The Collector</h2>
+            <p>This funky car is based on the Pagani Zonda Cinque. Hot wheels has exagerated its proportions. It looks pretty cool to me, I enjoy the crossover of a real car and a fantasy casting. The stretched roof is iconic across the Toon'd lineup. It has pretty basic details, but with such a design, I don't think I will be looking at the details so much.</p>    
+        </div>
+
+        <div class="image" style="float:right;">
+        <figure style="float:right;">
+            <img src="../Photos/Zonda_Cinque_Tooned.jpeg" style="float:right; width: min(490px, 50vw); height: auto; margin-left: 10px; border-radius: 20px; box-shadow: 5px 5px 10px #202326;">
+            <figcaption style="text-align: center;">Pagani Zonda Cinque Toon'd<br>By: Hot Wheels</figcaption>
+        </figure> 
+        </div>
+
+
+
+    <!-- Bootstrap 5.3.3 JS bundle (required for the hamburger menu) - loaded ONCE -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    <script src="../search.js" defer></script>
+</body>
+</html>

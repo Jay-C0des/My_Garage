@@ -21,7 +21,7 @@
       }
     </script>
 </head>
-<body>
+<body data-base="../">
   <nav class="navbar navbar-expand-lg navbar-dark my-navbar">
     <a href="../index.html"><img src="../Photos/My_Garage_logo.png" alt="My Garage Logo" class="navbar-logo"></a>
 
@@ -41,6 +41,12 @@
         <li class="nav-item"><a class="nav-link" href="../FreedoMotors.html">FreedoMotors</a></li>
         <li class="nav-item"><a class="nav-link" href="../album.html">Album</a></li>
       </ul>
+        <form class="d-flex my-2 my-lg-0 ms-lg-3 position-relative" role="search" id="car-search" autocomplete="off">
+          <input class="form-control form-control-sm" type="search" id="car-input"
+                placeholder="Search a car..." aria-label="Search cars">
+                <button type="button" class="car-clear" id="car-clear" aria-label="Clear search">&times;</button>
+          <div class="car-suggestions" id="car-suggestions"></div>
+        </form>
     </div>
   </nav>
 
@@ -68,5 +74,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
             crossorigin="anonymous"></script>
+    <script src="../search.js" defer></script>
 </body>
 </html>

@@ -273,7 +273,12 @@ footer p {
 /* Desktop: paragraph and photo sit side by side without overlapping */
 @media (min-width: 992px) {
   div.para {
-    width: 55% !important;           /* overrides the inline 60% */
+    width: calc(100% - min(490px, 36vw) - 130px) !important;   /* text fills the space left by the photo and margin */
+  }
+
+  /* The photo that follows a paragraph gets a margin from the screen edge */
+  div.para ~ div.image {
+    margin-right: 40px !important;
   }
 
   div.image figure {
@@ -311,4 +316,108 @@ footer p {
 /* Album: dropdown titles */
 .album-faq summary {
   font-size: 1.1rem;
+}
+/* Navbar search box */
+#car-input {
+  width: 200px;
+  background-color: #151719;
+  color: #F2EEE6;
+  border: 1px solid #333333;
+}
+
+#car-input::placeholder {
+  color: #A7AAAD;
+}
+
+#car-input:focus {
+  background-color: #151719;
+  color: #F2EEE6;
+  border-color: #D71920;
+  box-shadow: none;
+}
+
+/* Suggestion list under the search box */
+.car-suggestions {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  margin-top: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #151719;
+  border: 1px solid #333333;
+  border-radius: 8px;
+}
+
+.car-suggestion {
+  display: block;
+  padding: 10px 14px;
+  color: #F2EEE6;
+  font-family: Oswald, sans-serif;
+  text-decoration: none;
+}
+
+.car-suggestion:hover,
+.car-suggestion:focus {
+  background-color: #8F1117;
+  color: #F2EEE6;
+}
+
+/* Phones: full-width search box with larger tap targets */
+@media (max-width: 991.98px) {
+  #car-input {
+    width: 100%;
+  }
+
+  .car-suggestion {
+    padding: 14px 16px;
+    font-size: 1.1rem;
+  }
+}
+/* Heading inside the suggestion list */
+.car-suggestions-title {
+  padding: 8px 14px 4px;
+  color: #D71920;
+  font-family: Barlow Condensed, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+/* Navbar search: space on the right edge on desktop only */
+@media (min-width: 992px) {
+  #car-search {
+    margin-right: 20px;   /* gap between the search box and the screen edge */
+  }
+}
+/* Bold the "Album" suggestion in the search list */
+a.car-suggestion[href$="album.html"] {
+  font-weight: 530;
+}
+/* Hide the browser's built-in clear button so every browser looks the same */
+#car-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  display: none;
+}
+
+#car-input {
+  padding-right: 28px;     /* room for our own X button */
+}
+
+/* Our own clear button */
+.car-clear {
+  display: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 0;
+  padding: 0;
+  color: #D71920;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
 }
