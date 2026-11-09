@@ -11,6 +11,7 @@ const CARS = {
   "Lamborghini Huracan STO": "Lambo/Huracan.html",
   "Pagani Utopia": "Pagani/Utopia.html",
   "Pagani Zonda Cinque Toon'd": "Pagani/Zonda_Tooned.html",
+  "Nissan Silvia (S15) Spec R Aero": "Nissan/silvia.html",
   "JDMs": "JDM.html",
   "Eurocars": "Eurocars.html",
   "FreedoMotors": "FreedoMotors.html",
