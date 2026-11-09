@@ -3,8 +3,9 @@ body {
   background-color: #0D0F10;
   width: 100%;
   height: auto;
-  flex-direction: column;
   min-height: 100vh;
+  position: relative;      /* the footer is positioned against the page */
+  padding-bottom: 90px;    /* reserves space so the footer never covers content */
 }
 h1 {
   color: #F2EEE6;
@@ -35,10 +36,10 @@ h2 {
   height: auto;
 }
 .navbar-logo {
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 .navbar-logo:hover {
-  transform: scale(1.1) rotate(8deg);
+  transform: scale(1.2) rotate(10deg);
 }
 .my-navbar .navbar-nav .nav-link {
   display: block;
@@ -212,12 +213,19 @@ details p {
   line-height: 1.5;
 }
 footer {
+  position: absolute;      /* pinned to the bottom of the page */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;            /* must match the body's padding-bottom */
+  box-sizing: border-box;
+  display: flex;           /* centres the text inside the footer */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #151719;
   color: #F2EEE6;
   text-align: center;
-  clear: both;          /* moves the footer below the floated text and image */
-  margin-top: 40px;     /* space between the content and the footer */
-  padding: 12px 0;
   font-family: Oswald, sans-serif;
 }
 footer p {
@@ -265,7 +273,12 @@ footer p {
 /* Desktop: paragraph and photo sit side by side without overlapping */
 @media (min-width: 992px) {
   div.para {
-    width: 55% !important;           /* overrides the inline 60% */
+    width: calc(100% - min(490px, 36vw) - 130px) !important;   /* text fills the space left by the photo and margin */
+  }
+
+  /* The photo that follows a paragraph gets a margin from the screen edge */
+  div.para ~ div.image {
+    margin-right: 40px !important;
   }
 
   div.image figure {
@@ -274,5 +287,242 @@ footer p {
 
   div.image img {
     width: min(490px, 36vw) !important;  /* scales the photo with the screen */
+  }
+}
+/* Album: wider dropdown container */
+.album-faq {
+  max-width: 1100px;
+}
+
+/* Album: photos in a centred row, wrapping onto new lines when needed */
+.album-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 5px;
+}
+
+/* Album: every photo has the same size and shape */
+.album-grid img {
+  display: block;
+  width: 220px;
+  max-width: 100%;             /* shrinks on phones so it never overflows */
+  aspect-ratio: 4 / 3;         /* same shape for every photo */
+  object-fit: cover;           /* crops evenly instead of stretching */
+  border-radius: 15px;
+}
+
+/* Album: dropdown titles */
+.album-faq summary {
+  font-size: 1.1rem;
+}
+/* Navbar search box */
+#car-input {
+  width: 200px;
+  background-color: #151719;
+  color: #F2EEE6;
+  border: 1px solid #333333;
+}
+
+#car-input::placeholder {
+  color: #A7AAAD;
+}
+
+#car-input:focus {
+  background-color: #151719;
+  color: #F2EEE6;
+  border-color: #D71920;
+  box-shadow: none;
+}
+
+/* Suggestion list under the search box */
+.car-suggestions {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1050;
+  margin-top: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #151719;
+  border: 1px solid #333333;
+  border-radius: 8px;
+}
+
+.car-suggestion {
+  display: block;
+  padding: 10px 14px;
+  color: #F2EEE6;
+  font-family: Oswald, sans-serif;
+  text-decoration: none;
+}
+
+.car-suggestion:hover,
+.car-suggestion:focus {
+  background-color: #8F1117;
+  color: #F2EEE6;
+}
+
+/* Phones: full-width search box with larger tap targets */
+@media (max-width: 991.98px) {
+  #car-input {
+    width: 100%;
+  }
+
+  .car-suggestion {
+    padding: 14px 16px;
+    font-size: 1.1rem;
+  }
+}
+/* Heading inside the suggestion list */
+.car-suggestions-title {
+  padding: 8px 14px 4px;
+  color: #D71920;
+  font-family: Barlow Condensed, sans-serif;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+/* Navbar search: space on the right edge on desktop only */
+@media (min-width: 992px) {
+  #car-search {
+    margin-right: 20px;   /* gap between the search box and the screen edge */
+  }
+}
+/* Bold the "Album" suggestion in the search list */
+a.car-suggestion[href$="album.html"] {
+  font-weight: 530;
+}
+/* Hide the browser's built-in clear button so every browser looks the same */
+#car-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  display: none;
+}
+
+#car-input {
+  padding-right: 28px;     /* room for our own X button */
+}
+
+/* Our own clear button */
+.car-clear {
+  display: none;
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 0;
+  padding: 0;
+  color: #D71920;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+/* Phones: larger search box, easy-to-tap clear button */
+@media (max-width: 991.98px) {
+  #car-search {
+    width: 100%;
+    padding: 0 12px;          /* side space only, so the centred × lines up with the box */
+    margin: 10px 0 !important;
+  }
+
+  #car-input {
+    width: 100%;
+    height: 44px;             /* taller tap target */
+    font-size: 16px;          /* stops phones zooming in when the box is tapped */
+    padding: 8px 44px 8px 12px;
+  }
+
+  .car-clear {
+    right: 20px;              /* sits inside the right edge of the input */
+    width: 36px;
+    height: 36px;
+    font-size: 26px;
+  }
+
+  .car-suggestions {
+    left: 12px;               /* lines up with the input, not the form padding */
+    right: 12px;
+  }
+
+  .car-suggestion {
+    padding: 14px 16px;
+  }
+}
+/* Phones: larger navbar logo, links and hamburger button */
+@media (max-width: 991.98px) {
+  .navbar-logo {
+    max-width: 95px;          /* bigger logo */
+  }
+
+  .navbar-toggler {
+    padding: 6px 10px;
+    font-size: 1.4rem;        /* bigger hamburger button */
+  }
+
+  .my-navbar .navbar-nav .nav-link {
+    font-size: 1.15rem;       /* larger link text */
+    padding: 16px 18px;       /* taller tap targets */
+  }
+}
+/* Phones: Reddit-style search pill and larger navbar text */
+@media (max-width: 991.98px) {
+  .my-navbar .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    padding: 16px 18px;
+  }
+
+  #car-search {
+    position: relative;
+    width: 100%;
+    padding: 0 12px;
+    margin: 12px 0 !important;
+  }
+
+  #car-input {
+    width: 100%;
+    height: 48px;
+    font-size: 17px;                 /* 16px+ stops phones zooming in on tap */
+    padding: 10px 44px 10px 46px;    /* room for the icon on the left and × on the right */
+    border-radius: 999px;            /* pill shape */
+    border: 1px solid #272B2E;
+    background-color: #272B2E;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A7AAAD' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 18px center;
+    background-size: 18px 18px;
+  }
+
+  #car-input::placeholder {
+    color: #A7AAAD;
+    opacity: 1;
+  }
+
+  #car-input:focus {
+    background-color: #32363A;
+    border-color: #D71920;
+  }
+
+  .car-clear {
+    right: 24px;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    color: #A7AAAD;
+  }
+
+  .car-suggestions {
+    left: 12px;
+    right: 12px;
+    border-radius: 14px;
+    margin-top: 6px;
+  }
+
+  .car-suggestion {
+    padding: 14px 18px;
+    font-size: 1.05rem;
   }
 }

@@ -1,0 +1,27 @@
+name: Cache-bust CSS and JS
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Add a fresh version number to every stylesheet and script link
+        run: |
+          V=${GITHUB_SHA::8}
+          find . -name '*.html' -exec sed -i -E "s/(My_Style\.css|search\.js)(\?v=[A-Za-z0-9]*)?/\1?v=$V/g" {} +
+
+      - name: Commit the updated links
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Auto cache-bust CSS and JS links" && git push)
