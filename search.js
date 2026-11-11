@@ -12,6 +12,11 @@ const CARS = {
   "Pagani Utopia": "Pagani/Utopia.html",
   "Pagani Zonda Cinque Toon'd": "Pagani/Zonda_Tooned.html",
   "Nissan Silvia (S15) Spec R Aero": "Nissan/silvia.html",
+  "Porsche 911 Carrera RS 2.7": "Porsche/911RS.html",
+  "Porsche 911 GT3 Cup": "Porsche/911GT3.html",
+  "Porsche 911 Carrera S": "Porsche/911CS.html",
+  "Porsche 917": "Porsche/917.html",
+  "Porsche 935 K3 Kremer Racing": "Porsche/935K3PS.html",s
   "JDMs": "JDM.html",
   "Eurocars": "Eurocars.html",
   "FreedoMotors": "FreedoMotors.html",
