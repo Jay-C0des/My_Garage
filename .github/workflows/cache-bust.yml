@@ -3,6 +3,7 @@ name: Cache-bust CSS and JS
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write

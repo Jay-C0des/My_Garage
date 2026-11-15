@@ -68,9 +68,9 @@ div.article {
   font-size: 20px;
   overflow: 120%;
   border-radius: 10px;
-  width: 100%;   
-  height: auto; 
-  display: block;       
+  width: 100%;
+  height: auto;
+  display: flow-root;   /* was: display: block; - makes the box grow to contain the floated logo */
 }
 div.para {
   float:center;
