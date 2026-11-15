@@ -477,7 +477,7 @@ a.car-suggestion[href$="album.html"] {
 
   #car-search {
     position: relative;
-    width: 100%;
+    width: 160%;
     padding: 0 12px;
     margin: 12px 0 !important;
   }
