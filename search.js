@@ -16,7 +16,7 @@ const CARS = {
   "Porsche 911 GT3 Cup": "Porsche/911GT3.html",
   "Porsche 911 Carrera S": "Porsche/911CS.html",
   "Porsche 917": "Porsche/917.html",
-  "Porsche 935 K3 Kremer Racing": "Porsche/935K3PS.html",s
+  "Porsche 935 K3 Kremer Racing": "Porsche/935K3PS.html",
   "JDMs": "JDM.html",
   "Eurocars": "Eurocars.html",
   "FreedoMotors": "FreedoMotors.html",
